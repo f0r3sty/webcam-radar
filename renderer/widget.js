@@ -130,7 +130,7 @@
   let pinMode = 'desktop';
   function applyPin() {
     const onTop = pinMode === 'top';
-    $('wpin').textContent = onTop ? '📌' : '📍';
+    $('wpin').textContent = onTop ? '📍' : '📌';
     $('wpin').classList.toggle('on', onTop);
     $('wpin').title = onTop ? '已置顶（点击沉到桌面）' : '已沉到桌面（点击置顶）';
   }
