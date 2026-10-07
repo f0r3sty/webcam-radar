@@ -46,7 +46,6 @@ body { font-family: -apple-system, "PingFang SC", system-ui, sans-serif; user-se
   transition: background 0.15s;
 }
 .wbtn:hover { background: rgba(34, 211, 238, 0.35); }
-.wbtn.on { background: rgba(34, 211, 238, 0.85); color: #05121a; }
 
 #wbottom {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 10;
