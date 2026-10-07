@@ -128,18 +128,23 @@
   $('wvideo').addEventListener('click', (e) => { if (e.target === $('wvideo')) window.cam.openMain(); });
 
   let pinMode = 'desktop';
-  function applyPinIcon() { $('wpin').title = pinMode === 'top' ? '当前：浮在最上层（点击改为沉底）' : '当前：沉在桌面（点击改为置顶）'; }
-  $('wpin').addEventListener('click', async () => {
+  function applyPin() {
+    const onTop = pinMode === 'top';
+    $('wpin').textContent = onTop ? '📌' : '📍';
+    $('wpin').classList.toggle('on', onTop);
+    $('wpin').title = onTop ? '已置顶（点击沉到桌面）' : '已沉到桌面（点击置顶）';
+  }
+  $('wpin').addEventListener('click', () => {
     pinMode = pinMode === 'top' ? 'desktop' : 'top';
-    await window.cam.setWidgetPin(pinMode);
-    applyPinIcon();
+    applyPin(); // 立即反馈
+    window.cam.setWidgetPin(pinMode);
   });
 
   (async () => {
     const cfg = await window.cam.getConfig();
     pinMode = cfg.widgetPin || 'desktop';
     if (cfg.interval) st.interval = Number(cfg.interval);
-    applyPinIcon();
+    applyPin();
     const cat = await window.cam.getCatalog();
     const all = (cat || []).filter((c) => c && c.url);
     // 按国家均匀取样，每国最多 50 个，避免被摄像头最多的国家刷屏
