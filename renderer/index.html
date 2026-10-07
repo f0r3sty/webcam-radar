@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src * data: blob:; media-src * blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' blob:; worker-src 'self' blob:; child-src blob:; connect-src *" />
+  <title>全球摄像头</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="stage">
+      <video id="video" playsinline muted autoplay></video>
+
+      <div id="loading" class="loading hidden">
+        <div class="spin"></div>
+        <div id="loadingText">正在连线…</div>
+      </div>
+
+      <div id="stageTop">
+        <div id="liveBadge"><span class="dot"></span>LIVE</div>
+        <div id="camFlag" class="flag"></div>
+        <div id="camName">—</div>
+        <div class="spacer"></div>
+        <div id="camClock" class="clock">--:--</div>
+      </div>
+
+      <div id="stageBottom">
+        <div id="camMeta">
+          <span id="camCountry" class="meta">—</span>
+          <span class="sep">·</span>
+          <span id="camCity" class="meta">—</span>
+          <span class="sep">·</span>
+          <span id="camScene" class="meta">—</span>
+        </div>
+        <div id="progressWrap"><div id="progressBar"></div></div>
+        <div id="controls">
+          <button id="prevBtn" title="上一个">⏮</button>
+          <button id="playBtn" title="暂停/继续轮播">⏸</button>
+          <button id="nextBtn" title="下一个">⏭</button>
+          <div class="spacer"></div>
+          <span id="countdown">--s 后切换</span>
+          <div class="spacer"></div>
+          <button id="detailBtn" title="在浏览器打开">↗</button>
+          <button id="fullBtn" title="全屏">⛶</button>
+        </div>
+      </div>
+    </div>
+
+    <aside id="side">
+      <div class="sideHead">
+        <span class="logo">🌍</span>
+        <span>全球摄像头</span>
+        <span id="totalBadge" class="badge">0</span>
+      </div>
+
+      <div id="map"></div>
+
+      <div class="sideBlock">
+        <div class="row">
+          <label>切换间隔
+            <select id="interval">
+              <option value="60">1 分钟</option>
+              <option value="120" selected>2 分钟</option>
+              <option value="300">5 分钟</option>
+              <option value="600">10 分钟</option>
+            </select>
+          </label>
+          <label>播放顺序
+            <select id="order">
+              <option value="shuffle" selected>随机</option>
+              <option value="seq">顺序</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label class="grow">国家/地区
+            <select id="country"><option value="">全部</option></select>
+          </label>
+        </div>
+      </div>
+
+      <div class="sideBlock next">
+        <div class="upNextHead">即将切换</div>
+        <div class="upNext">
+          <img id="nextThumb" alt="" />
+          <div class="upNextInfo">
+            <div id="nextName">—</div>
+            <div id="nextMeta" class="meta"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sideFoot">
+        <button id="widgetBtn" class="footBtn">⊞ 桌面挂件</button>
+        <span id="status">准备中…</span>
+      </div>
+    </aside>
+  </div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/hls.min.js"></script>
+  <script src="countries.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

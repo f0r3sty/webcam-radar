@@ -1,0 +1,123 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background: #070a11;
+  color: #e8eef7;
+  user-select: none;
+}
+
+#app { display: flex; height: 100vh; }
+
+/* ---------- 舞台 ---------- */
+#stage { position: relative; flex: 1; background: #000; overflow: hidden; }
+#video { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
+
+.loading {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 14px;
+  background: rgba(4, 8, 16, 0.72); backdrop-filter: blur(3px); z-index: 30;
+}
+.loading.hidden { display: none; }
+.spin {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 3px solid rgba(34, 211, 238, 0.25); border-top-color: #22d3ee;
+  animation: sp 0.9s linear infinite;
+}
+@keyframes sp { to { transform: rotate(360deg); } }
+#loadingText { color: #9fb3cc; font-size: 13px; }
+
+#stageTop {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+  display: flex; align-items: center; gap: 10px; padding: 12px 16px;
+  background: linear-gradient(180deg, rgba(3, 6, 12, 0.85), rgba(3, 6, 12, 0));
+}
+#liveBadge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #e02424; color: #fff; font-weight: 700; font-size: 11px;
+  letter-spacing: 0.5px; padding: 3px 8px; border-radius: 5px;
+}
+#liveBadge .dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #fff;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+#camFlag { font-size: 20px; line-height: 1; }
+#camName { font-size: 15px; font-weight: 600; text-shadow: 0 1px 6px rgba(0,0,0,.7); }
+.spacer { flex: 1; }
+.clock { font-size: 12px; color: #9fb3cc; font-variant-numeric: tabular-nums; }
+
+#stageBottom {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 20;
+  padding: 14px 16px 12px;
+  background: linear-gradient(0deg, rgba(3, 6, 12, 0.9), rgba(3, 6, 12, 0));
+}
+#camMeta { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: #b9c8dc; }
+#camMeta .sep { color: #55637a; }
+#camMeta .meta { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#camScene { color: #7f8ea6; }
+
+#progressWrap { height: 3px; background: rgba(255,255,255,.14); border-radius: 3px; margin: 10px 0; overflow: hidden; }
+#progressBar { height: 100%; width: 0%; background: linear-gradient(90deg, #22d3ee, #4f9dff); transition: width .9s linear; }
+
+#controls { display: flex; align-items: center; gap: 8px; }
+#controls button {
+  background: rgba(255,255,255,.09); color: #e8eef7; border: 1px solid rgba(255,255,255,.12);
+  width: 34px; height: 30px; border-radius: 7px; font-size: 14px; cursor: pointer;
+  transition: background .15s;
+}
+#controls button:hover { background: rgba(34,211,238,.22); }
+#countdown { font-size: 12px; color: #9fb3cc; font-variant-numeric: tabular-nums; min-width: 88px; text-align: center; }
+
+/* ---------- 侧栏 ---------- */
+#side {
+  width: 322px; background: #0b111c; border-left: 1px solid rgba(255,255,255,.06);
+  display: flex; flex-direction: column;
+}
+.sideHead {
+  display: flex; align-items: center; gap: 8px; padding: 14px 16px;
+  font-size: 15px; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.sideHead .logo { font-size: 18px; }
+.badge {
+  margin-left: auto; background: rgba(34,211,238,.16); color: #57d7ea;
+  font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px;
+}
+#map { height: 240px; width: 100%; background: #0b111c; filter: saturate(0.85); }
+
+.sideBlock { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,.06); }
+.row { display: flex; gap: 10px; margin-bottom: 10px; }
+.row:last-child { margin-bottom: 0; }
+.row label { display: flex; flex-direction: column; gap: 5px; font-size: 11.5px; color: #8b9bb3; flex: 1; }
+.row label.grow { flex: 1; }
+select {
+  background: #131b29; color: #e8eef7; border: 1px solid rgba(255,255,255,.12);
+  border-radius: 7px; padding: 6px 8px; font-size: 12.5px; outline: none;
+}
+select:focus { border-color: #22d3ee; }
+
+.next .upNextHead { font-size: 11.5px; color: #8b9bb3; margin-bottom: 9px; }
+.upNext { display: flex; gap: 10px; align-items: center; }
+.upNext img { width: 92px; height: 54px; border-radius: 7px; object-fit: cover; background: #131b29; flex: none; }
+.upNextInfo { min-width: 0; }
+#nextName { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#nextMeta { font-size: 11.5px; color: #8b9bb3; margin-top: 3px; }
+
+.sideFoot {
+  margin-top: auto; padding: 10px 16px; font-size: 11.5px; color: #7f8ea6;
+  border-top: 1px solid rgba(255,255,255,.06);
+  display: flex; align-items: center; gap: 10px;
+}
+.footBtn {
+  background: rgba(34,211,238,.14); color: #6fdcee; border: 1px solid rgba(34,211,238,.3);
+  border-radius: 7px; padding: 5px 10px; font-size: 12px; cursor: pointer; flex: none;
+}
+.footBtn:hover { background: rgba(34,211,238,.26); }
+.hidden { display: none !important; }
+
+/* Leaflet tooltip 深色 */
+.leaflet-tooltip {
+  background: rgba(11,17,28,.92); border: 1px solid rgba(255,255,255,.14);
+  color: #e8eef7; font-size: 11.5px; border-radius: 6px; padding: 3px 7px;
+}
+.leaflet-tooltip-top:before { border-top-color: rgba(11,17,28,.92); }

@@ -1,0 +1,36 @@
+{
+  "name": "webcam-radar",
+  "version": "1.0.0",
+  "description": "全球摄像头 - 实时轮播世界各地的公开直播摄像头",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "author": "liguanghui",
+  "license": "MIT",
+  "build": {
+    "appId": "com.liguanghui.webcamradar",
+    "productName": "全球摄像头",
+    "files": [
+      "main.js",
+      "preload.js",
+      "catalog.json",
+      "renderer/**/*"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.0.0",
+    "electron-builder": "^26.15.3"
+  }
+}

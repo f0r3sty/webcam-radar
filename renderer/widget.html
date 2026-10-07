@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src * data: blob:; media-src * blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' blob:; worker-src 'self' blob:; child-src blob:; connect-src *" />
+  <title>摄像头挂件</title>
+  <link rel="stylesheet" href="widget.css" />
+</head>
+<body>
+  <div id="w">
+    <video id="wvideo" playsinline muted autoplay></video>
+
+    <div id="wload" class="wload"><div class="spin"></div></div>
+
+    <div id="wtop">
+      <span id="wflag" class="wflag"></span>
+      <span id="wname" class="wname">正在连线…</span>
+      <button id="wpin" class="wbtn" title="置顶/置底">📌</button>
+      <button id="wclose" class="wbtn" title="关闭挂件">✕</button>
+    </div>
+
+    <div id="wbottom">
+      <button id="wprev" class="wbtn" title="上一个">⏮</button>
+      <button id="wplay" class="wbtn" title="暂停/继续">⏸</button>
+      <button id="wnext" class="wbtn" title="下一个">⏭</button>
+      <span id="wcount" class="wcount">--s</span>
+      <span class="grow"></span>
+      <button id="wopen" class="wbtn" title="打开主窗口">⛶</button>
+    </div>
+  </div>
+
+  <script src="vendor/hls.min.js"></script>
+  <script src="countries.js"></script>
+  <script src="widget.js"></script>
+</body>
+</html>
