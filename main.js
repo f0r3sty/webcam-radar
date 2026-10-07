@@ -63,6 +63,17 @@ function createWindow() {
 const WIDGET_W = 420;
 const WIDGET_H = 292;
 
+// 置顶/沉底：macOS 支持 'desktop'/'floating' 层级；Windows 只有开关置顶
+function applyWidgetPin(mode) {
+  if (!widgetWin || widgetWin.isDestroyed()) return;
+  const onTop = mode === 'top';
+  try {
+    if (process.platform === 'win32') widgetWin.setAlwaysOnTop(onTop);
+    else widgetWin.setAlwaysOnTop(true, onTop ? 'floating' : 'desktop');
+  } catch (e) {}
+  try { widgetWin.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: onTop }); } catch (e) {}
+}
+
 function openWidgetWindow() {
   if (widgetWin && !widgetWin.isDestroyed()) { widgetWin.show(); widgetWin.focus(); return; }
   const cfg = loadConfig();
@@ -91,8 +102,7 @@ function openWidgetWindow() {
   widgetWin.loadFile(path.join(__dirname, 'renderer', 'widget.html'));
 
   const pin = cfg.widgetPin || 'desktop';
-  try { widgetWin.setAlwaysOnTop(true, pin === 'top' ? 'floating' : 'desktop'); } catch (e) {}
-  widgetWin.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: pin === 'top' });
+  applyWidgetPin(pin);
 
   widgetWin.on('moved', () => {
     const [x, y] = widgetWin.getPosition();
@@ -190,10 +200,7 @@ ipcMain.handle('widget:close', () => {
 });
 ipcMain.handle('widget:pin', (_e, mode) => {
   saveConfig({ widgetPin: mode });
-  if (widgetWin && !widgetWin.isDestroyed()) {
-    try { widgetWin.setAlwaysOnTop(true, mode === 'top' ? 'floating' : 'desktop'); } catch (e) {}
-    widgetWin.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: mode === 'top' });
-  }
+  applyWidgetPin(mode);
   return mode;
 });
 ipcMain.handle('widget:openMain', () => {
