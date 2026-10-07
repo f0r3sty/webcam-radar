@@ -8,7 +8,7 @@
     interval: 120000, remaining: 120, playing: true,
     failed: new Set(), cache: new Map(),
   };
-  let hls = null, watchdog = null;
+  let hls = null, watchdog = null, photoTimer = null;
 
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) { const j = (Math.random() * (i + 1)) | 0; [a[i], a[j]] = [a[j], a[i]]; }
@@ -29,9 +29,23 @@
 
   function destroy() {
     clearTimeout(watchdog);
+    clearInterval(photoTimer); photoTimer = null;
     if (hls) { try { hls.destroy(); } catch (e) {} hls = null; }
     const v = $('wvideo'); try { v.pause(); } catch (e) {}
     v.removeAttribute('src'); try { v.load(); } catch (e) {}
+  }
+
+  function showPhoto(cam) {
+    const img = $('wphoto');
+    $('wvideo').classList.add('hidden');
+    img.classList.remove('hidden');
+    let done = false;
+    const load = () => { img.src = cam.url + (cam.url.includes('?') ? '&' : '?') + '_=' + Date.now(); };
+    img.onload = () => { done = true; console.log('[wcam] photo:', cam.name); $('wload').classList.add('hidden'); };
+    img.onerror = () => { if (!done) { st.failed.add(cam.url); next(); } };
+    load();
+    photoTimer = setInterval(load, 60000);
+    watchdog = setTimeout(() => { if (!done) { st.failed.add(cam.url); next(); } }, 15000);
   }
 
   async function show(cam) {
@@ -43,11 +57,25 @@
     st.remaining = Math.round(st.interval / 1000);
 
     destroy();
-    let tk = null;
-    try { tk = await token(cam); } catch (e) {}
-    if (!tk) { st.failed.add(cam.url); console.log('[wcam] no-stream:', cam.name); return next(); }
+    $('wload').classList.remove('hidden');
 
-    const url = HLS_HOST + tk;
+    if (cam.kind === 'image') { showPhoto(cam); return; }
+    $('wphoto').classList.add('hidden');
+    $('wvideo').classList.remove('hidden');
+
+    let url = null;
+    if (cam.kind === 'bili') {
+      let r = null;
+      try { r = await window.cam.biliPlayUrl(cam.roomId); } catch (e) {}
+      if (!r || !r.ok || !r.url) { st.failed.add(cam.url); console.log('[wcam] bili-offline:', cam.name); return next(); }
+      url = r.url;
+    } else {
+      let tk = null;
+      try { tk = await token(cam); } catch (e) {}
+      if (!tk) { st.failed.add(cam.url); console.log('[wcam] no-stream:', cam.name); return next(); }
+      url = HLS_HOST + tk;
+    }
+
     const v = $('wvideo');
     if (window.Hls && window.Hls.isSupported()) {
       hls = new window.Hls({ enableWorker: true, maxBufferLength: 8, liveSyncDurationCount: 3, manifestLoadingTimeOut: 15000 });

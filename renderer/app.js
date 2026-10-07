@@ -20,6 +20,7 @@
 
   let hls = null;
   let watchdog = null;
+  let photoTimer = null;
   let failStreak = 0;
 
   // ---------- 地图 ----------
@@ -65,6 +66,8 @@
   // ---------- 播放 ----------
   function destroyHls() {
     clearTimeout(watchdog);
+    clearInterval(photoTimer);
+    photoTimer = null;
     if (hls) {
       try { hls.destroy(); } catch (e) {}
       hls = null;
@@ -111,10 +114,13 @@
     $('camCountry').textContent = info.n || humanize(cam.country);
     $('camCity').textContent = humanize(cam.city);
     $('camScene').textContent = sceneOf(cam);
-    const ll = [info.lat || 0, info.lon || 0];
+    const ll = [
+      Number.isFinite(cam.lat) ? cam.lat : info.lat || 0,
+      Number.isFinite(cam.lon) ? cam.lon : info.lon || 0,
+    ];
     marker.setLatLng(ll);
     marker.setTooltipContent(window.flagEmoji(info.iso) + ' ' + (cam.name || ''));
-    map.flyTo(ll, 4, { duration: 1.1 });
+    map.flyTo(ll, Number.isFinite(cam.lat) ? 9 : 4, { duration: 1.1 });
   }
 
   function updateNext() {
@@ -124,6 +130,35 @@
     const info = C[nxt.country] || {};
     $('nextMeta').textContent = (info.n || humanize(nxt.country)) + ' · ' + humanize(nxt.city);
     $('nextThumb').src = nxt.thumb || '';
+  }
+
+  function loadPhoto(cam) {
+    const img = $('photo');
+    img.src = cam.url + (cam.url.includes('?') ? '&' : '?') + '_=' + Date.now();
+  }
+
+  function showPhoto(cam) {
+    const img = $('photo');
+    $('video').classList.add('hidden');
+    img.classList.remove('hidden');
+    let done = false;
+    img.onload = () => {
+      done = true;
+      failStreak = 0;
+      console.log('[cam] photo:', cam.name);
+      $('loading').classList.add('hidden');
+      $('status').textContent = '快照 · 每 2 分钟更新';
+    };
+    img.onerror = () => {
+      if (done) return;
+      state.failed.add(cam.url);
+      console.log('[cam] photo-fail:', cam.name);
+      $('status').textContent = '（快照失败）换下一个';
+      next(true);
+    };
+    loadPhoto(cam);
+    photoTimer = setInterval(() => loadPhoto(cam), 60000);
+    watchdog = setTimeout(() => { if (!done) { state.failed.add(cam.url); next(true); } }, 15000);
   }
 
   async function showCam(cam, { isSkip } = {}) {
@@ -138,23 +173,43 @@
     $('loading').classList.remove('hidden');
     $('loadingText').textContent = '正在连线 ' + (cam.name || '');
 
-    let token = null;
-    try {
-      token = await extractToken(cam);
-    } catch (e) {}
-
-    if (!token) {
-      // YouTube 源或已下线 → 跳过
-      state.failed.add(cam.url);
-      console.log('[cam] no-stream:', cam.name);
-      $('status').textContent = '此摄像头无可用直播流，跳过';
-      if (!isSkip) return; // 初始加载失败由 next() 兜底
-      return next(true);
+    // 快照类摄像头（JPEG，每 2 分钟更新，无直播流）
+    if (cam.kind === 'image') {
+      showPhoto(cam);
+      return;
     }
 
-    const url = HLS_HOST + token;
-    const video = $('video');
+    $('photo').classList.add('hidden');
+    $('video').classList.remove('hidden');
 
+    let url = null;
+    if (cam.kind === 'bili') {
+      let r = null;
+      try { r = await window.cam.biliPlayUrl(cam.roomId); } catch (e) {}
+      if (!r || !r.ok || !r.url) {
+        state.failed.add(cam.url);
+        console.log('[cam] bili-offline:', cam.name);
+        $('status').textContent = '直播间未开播，跳过';
+        return next(true);
+      }
+      url = r.url;
+    } else {
+      let token = null;
+      try { token = await extractToken(cam); } catch (e) {}
+      if (!token) {
+        state.failed.add(cam.url);
+        console.log('[cam] no-stream:', cam.name);
+        $('status').textContent = '此摄像头无可用直播流，跳过';
+        return next(true);
+      }
+      url = HLS_HOST + token;
+    }
+
+    playHls(url, cam);
+  }
+
+  function playHls(url, cam) {
+    const video = $('video');
     if (window.Hls && window.Hls.isSupported()) {
       hls = new window.Hls({
         lowLatencyMode: false,

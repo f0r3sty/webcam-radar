@@ -150,6 +150,38 @@ ipcMain.handle('proxy:text', async (_e, url) => {
 
 ipcMain.handle('open:external', (_e, url) => { shell.openExternal(url); return true; });
 
+// bilibili 直播间取 HLS 播放地址
+const BILI_UA =
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36';
+ipcMain.handle('bili:playurl', async (_e, roomId) => {
+  try {
+    const api =
+      `https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo?room_id=${roomId}` +
+      `&protocol=0,1&format=0,1,2&codec=0,1&qn=10000&platform=web&ptype=8`;
+    const res = await fetch(api, {
+      headers: { 'User-Agent': BILI_UA, Referer: 'https://live.bilibili.com/' },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!res.ok) return { ok: false, status: res.status };
+    const d = await res.json();
+    const data = d.data || {};
+    if (data.live_status !== 1 || !data.playurl_info) return { ok: false, offline: true };
+    const pu = data.playurl_info.playurl || {};
+    for (const s of pu.stream || []) {
+      if (s.protocol_name !== 'http_hls') continue;
+      for (const f of s.format || []) {
+        for (const c of f.codec || []) {
+          const ui = (c.url_info || [])[0];
+          if (ui) return { ok: true, url: ui.host + c.base_url + ui.extra };
+        }
+      }
+    }
+    return { ok: false, offline: true };
+  } catch (e) {
+    return { ok: false, error: String(e) };
+  }
+});
+
 ipcMain.handle('widget:open', () => { openWidgetWindow(); return true; });
 ipcMain.handle('widget:close', () => {
   if (widgetWin && !widgetWin.isDestroyed()) widgetWin.close();
