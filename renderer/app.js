@@ -78,10 +78,21 @@
     try { v.load(); } catch (e) {}
   }
 
+  const PER_COUNTRY_CAP = 50; // 轮播池里每个国家最多取这么多，避免某国(如台湾5748个)刷屏
   function buildList() {
-    const base = state.country
-      ? state.catalog.filter((c) => c.country === state.country)
-      : state.catalog.slice();
+    let base;
+    if (state.country) {
+      base = state.catalog.filter((c) => c.country === state.country);
+    } else {
+      const by = {};
+      for (const c of state.catalog) (by[c.country] || (by[c.country] = [])).push(c);
+      base = [];
+      for (const k in by) {
+        let arr = by[k];
+        if (arr.length > PER_COUNTRY_CAP) arr = shuffle(arr.slice()).slice(0, PER_COUNTRY_CAP);
+        base.push(...arr);
+      }
+    }
     state.list = base;
     $('totalBadge').textContent = base.length;
     if (state.order === 'shuffle') shuffle(state.list);

@@ -141,7 +141,17 @@
     if (cfg.interval) st.interval = Number(cfg.interval);
     applyPinIcon();
     const cat = await window.cam.getCatalog();
-    st.list = (cat || []).filter((c) => c && c.url);
+    const all = (cat || []).filter((c) => c && c.url);
+    // 按国家均匀取样，每国最多 50 个，避免被摄像头最多的国家刷屏
+    const by = {};
+    for (const c of all) (by[c.country] || (by[c.country] = [])).push(c);
+    const pool = [];
+    for (const k in by) {
+      let arr = by[k];
+      if (arr.length > 50) arr = shuffle(arr.slice()).slice(0, 50);
+      pool.push(...arr);
+    }
+    st.list = pool;
     shuffle(st.list);
     next();
   })();
