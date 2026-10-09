@@ -2,6 +2,49 @@ const { app, BrowserWindow, ipcMain, shell, screen } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
+// 兼容旧系统（如 Windows 7 / 老显卡）：关硬件加速，避免黑屏/闪退
+if (process.platform === 'win32' || process.env.CAM_COMPAT) {
+  app.disableHardwareAcceleration();
+}
+
+// 老 Node（Electron<23 / Node16）没有全局 fetch、AbortSignal.timeout —— 给兜底
+if (typeof fetch === 'undefined') {
+  global.fetch = (url, opts = {}) =>
+    new Promise((resolve, reject) => {
+      const mod = url.startsWith('https') ? require('https') : require('http');
+      const u = new URL(url);
+      const method = opts.method || (opts.body ? 'POST' : 'GET');
+      const headers = Object.assign({ 'User-Agent': 'Mozilla/5.0' }, opts.headers || {});
+      const req = mod.request(
+        { hostname: u.hostname, port: u.port || (url.startsWith('https') ? 443 : 80), path: u.pathname + u.search, method, headers },
+        (res) => {
+          const chunks = [];
+          res.on('data', (c) => chunks.push(c));
+          res.on('end', () => {
+            const _buf = Buffer.concat(chunks);
+            resolve({
+              ok: res.statusCode >= 200 && res.statusCode < 300,
+              status: res.statusCode,
+              headers: res.headers,
+              json: async () => JSON.parse(_buf.toString('utf8')),
+              text: async () => _buf.toString('utf8'),
+              arrayBuffer: async () => _buf.buffer.slice(_buf.byteOffset, _buf.byteOffset + _buf.byteLength),
+            });
+          });
+        });
+      req.on('error', reject);
+      if (opts.signal) opts.signal.addEventListener('abort', () => req.destroy(new Error('aborted')));
+      if (opts.body) req.write(opts.body);
+      req.end();
+    });
+}
+function to(ms) {
+  try { if (AbortSignal && AbortSignal.timeout) return to(ms); } catch (e) {}
+  const c = new AbortController();
+  setTimeout(() => c.abort(), ms);
+  return c.signal;
+}
+
 // 允许视频自动播放（摄像头流本身多为无声）
 app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 
@@ -151,7 +194,7 @@ ipcMain.handle('proxy:text', async (_e, url) => {
         'User-Agent':
           'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36',
       },
-      signal: AbortSignal.timeout(20000),
+      signal: to(20000),
     });
     if (!res.ok) return { ok: false, status: res.status };
     return { ok: true, text: await res.text() };
@@ -170,7 +213,7 @@ ipcMain.handle('bili:playurl', async (_e, roomId) => {
       `&protocol=0,1&format=0,1,2&codec=0,1&qn=10000&platform=web&ptype=8`;
     const res = await fetch(api, {
       headers: { 'User-Agent': BILI_UA, Referer: 'https://live.bilibili.com/' },
-      signal: AbortSignal.timeout(15000),
+      signal: to(15000),
     });
     if (!res.ok) return { ok: false, status: res.status };
     const d = await res.json();
