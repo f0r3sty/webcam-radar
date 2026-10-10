@@ -107,6 +107,13 @@ window.COUNTRIES = {
   thailand: { n: '泰国', iso: 'TH', lat: 15.87, lon: 100.99 },
   'turks-and-caicos': { n: '特克斯和凯科斯', iso: 'TC', lat: 21.69, lon: -71.8 },
   uruguay: { n: '乌拉圭', iso: 'UY', lat: -32.52, lon: -55.77 },
+  ukraine: { n: '乌克兰', iso: 'UA', lat: 48.4, lon: 31.2 },
+  latvia: { n: '拉脱维亚', iso: 'LV', lat: 56.9, lon: 25.0 },
+  lithuania: { n: '立陶宛', iso: 'LT', lat: 55.2, lon: 23.9 },
+  'saudi-arabia': { n: '沙特阿拉伯', iso: 'SA', lat: 24.0, lon: 45.0 },
+  palestine: { n: '巴勒斯坦', iso: 'PS', lat: 31.9, lon: 35.2 },
+  egypt: { n: '埃及', iso: 'EG', lat: 26.8, lon: 30.8 },
+  iran: { n: '伊朗', iso: 'IR', lat: 32.4, lon: 53.7 },
   'hong-kong': { n: '中国香港', iso: 'HK', lat: 22.32, lon: 114.17 },
 };
 

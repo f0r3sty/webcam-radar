@@ -2488,6 +2488,36 @@
   "thumb": "https://cdn.skylinewebcams.com/live2351.jpg"
  },
  {
+  "url": "https://balticlivecam.com/images/webcamera_leirvik_faroe_Islands_Denmark.jpg",
+  "name": "Webcam Leirvík, Faroe Islands, Denmark - Online Live Cam",
+  "desc": "Webcam Leirvík, Faroe Islands, Denmark - Online Live Cam",
+  "country": "denmark",
+  "region": "",
+  "city": "Faroe Islands",
+  "thumb": "https://balticlivecam.com/images/webcamera_leirvik_faroe_Islands_Denmark.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Sandur-.jpg",
+  "name": "Webcam Sandur, Faroe Islands - Online Live Cam",
+  "desc": "Webcam Sandur, Faroe Islands - Online Live Cam",
+  "country": "denmark",
+  "region": "",
+  "city": "Faroe Islands",
+  "thumb": "https://balticlivecam.com/images/webcam_Sandur-.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Vedersø_Klitvej_panorama_denmark.jpg",
+  "name": "Webcam Vedersø Klit, Tim, Denmark - Online Live Cam",
+  "desc": "Webcam Vedersø Klit, Tim, Denmark - Online Live Cam",
+  "country": "denmark",
+  "region": "",
+  "city": "Tim",
+  "thumb": "https://balticlivecam.com/images/webcam_Vedersø_Klitvej_panorama_denmark.jpg",
+  "kind": "image"
+ },
+ {
   "url": "https://www.skylinewebcams.com/en/webcam/denmark/southern-denmark/henne/henne-beach.html",
   "name": "Henne Beach - Denmark",
   "desc": "View of Henne Beach in Denmark",
@@ -3260,6 +3290,16 @@
   "region": "santa-elena",
   "city": "santa-elena",
   "thumb": "https://cdn.skylinewebcams.com/live3724.jpg"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_El_Gouna_hurghada.jpg",
+  "name": "Webcam El Gouna, Hurghada, Egypt - Online Live Cam",
+  "desc": "Webcam El Gouna, Hurghada, Egypt - Online Live Cam",
+  "country": "egypt",
+  "region": "",
+  "city": "Hurghada",
+  "thumb": "https://balticlivecam.com/images/webcam_El_Gouna_hurghada.jpg",
+  "kind": "image"
  },
  {
   "url": "https://www.skylinewebcams.com/en/webcam/el-salvador/la-libertad/la-libertad/playa-conchalio-el-salvador.html",
@@ -7681,6 +7721,106 @@
   "thumb": "https://cdn.skylinewebcams.com/live1574.jpg"
  },
  {
+  "url": "https://balticlivecam.com/images/NarvaCastle.jpg",
+  "name": "Narva Castle and Ivangorod Fortress on Live Stream Webcam in",
+  "desc": "Narva Castle and Ivangorod Fortress on Live Stream Webcam in Estonia",
+  "country": "estonia",
+  "region": "",
+  "city": "Narva",
+  "thumb": "https://balticlivecam.com/images/NarvaCastle.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_narva_city_center_estonia.jpg",
+  "name": "Watch the Weather in Narva city, Estonia with our HD Webcam",
+  "desc": "Watch the Weather in Narva city, Estonia with our HD Webcam",
+  "country": "estonia",
+  "region": "",
+  "city": "Narva",
+  "thumb": "https://balticlivecam.com/images/webcam_narva_city_center_estonia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Narva-Jõesuu.jpg",
+  "name": "See the Narva-Jõesuu weather from Live Stream Webcam on the ",
+  "desc": "See the Narva-Jõesuu weather from Live Stream Webcam on the Beach",
+  "country": "estonia",
+  "region": "",
+  "city": "Narva Joesuu",
+  "thumb": "https://balticlivecam.com/images/webcam_Narva-Jõesuu.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_parnu_city_center_estonia.jpg",
+  "name": "Webcam Parnu, Pärnu, Estonia - Live Parnu Web Camera Online",
+  "desc": "Webcam Parnu, Pärnu, Estonia - Live Parnu Web Camera Online",
+  "country": "estonia",
+  "region": "",
+  "city": "Parnu",
+  "thumb": "https://balticlivecam.com/images/webcam_parnu_city_center_estonia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/piritabeach.jpg",
+  "name": "Webcam Pirita Beach, Pirita, Estonia - Online Live Cam",
+  "desc": "Webcam Pirita Beach, Pirita, Estonia - Online Live Cam",
+  "country": "estonia",
+  "region": "",
+  "city": "Pirita",
+  "thumb": "https://balticlivecam.com/images/piritabeach.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_tallinn_bay_pirita_beach.jpg",
+  "name": "Tallinn Bay Panorama - beautiful view from Pirita beach",
+  "desc": "Tallinn Bay Panorama - beautiful view from Pirita beach",
+  "country": "estonia",
+  "region": "",
+  "city": "Tallinn",
+  "thumb": "https://balticlivecam.com/images/webcam_tallinn_bay_pirita_beach.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/tallinOldtownviewfrom-theTelegraaf-rooftop.jpg",
+  "name": "Tallinn Old Town View from Hotel Telefraaf Rooftop",
+  "desc": "Tallinn Old Town View from Hotel Telefraaf Rooftop",
+  "country": "estonia",
+  "region": "",
+  "city": "Tallinn",
+  "thumb": "https://balticlivecam.com/images/tallinOldtownviewfrom-theTelegraaf-rooftop.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Freedom-_Square_Tallinn.jpg",
+  "name": "Webcam Freedom Square, Tallinn, Estonia - Online Live Cam",
+  "desc": "Webcam Freedom Square, Tallinn, Estonia - Online Live Cam",
+  "country": "estonia",
+  "region": "",
+  "city": "Tallinn",
+  "thumb": "https://balticlivecam.com/images/webcam_Freedom-_Square_Tallinn.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_tallinn.jpg",
+  "name": "Webcam Tallinn, Tallinn - Online Live Cam",
+  "desc": "Webcam Tallinn, Tallinn - Online Live Cam",
+  "country": "estonia",
+  "region": "",
+  "city": "Tallinn",
+  "thumb": "https://balticlivecam.com/images/webcam_tallinn.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/tartu.jpg",
+  "name": "Take a look at the Webcam of Weather in city Tartu, Estonia",
+  "desc": "Take a look at the Webcam of Weather in city Tartu, Estonia",
+  "country": "estonia",
+  "region": "",
+  "city": "Tartu",
+  "thumb": "https://balticlivecam.com/images/tartu.jpg",
+  "kind": "image"
+ },
+ {
   "url": "https://www.skylinewebcams.com/en/webcam/estonia/voru-county/antsla-parish/black-storks.html",
   "name": "Black Storks - Estonia",
   "desc": "View of the black storks of the Karula National Park in Estonia",
@@ -7724,6 +7864,76 @@
   "region": "eysturoy",
   "city": "eystur",
   "thumb": "https://cdn.skylinewebcams.com/live1285.jpg"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Klaus-K-Hotel-Helsinki-Sky-Loft-Terrace.jpg",
+  "name": "Webcam Helsinki live cam show weather in live Helsinki on th",
+  "desc": "Webcam Helsinki live cam show weather in live Helsinki on the Klaus Hotel",
+  "country": "finland",
+  "region": "",
+  "city": "Helsinki",
+  "thumb": "https://balticlivecam.com/images/Klaus-K-Hotel-Helsinki-Sky-Loft-Terrace.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_santa_claus_village_lapland.jpg",
+  "name": "Webcam Santa Claus Village, Lapland - Online Live Cam",
+  "desc": "Webcam Santa Claus Village, Lapland - Online Live Cam",
+  "country": "finland",
+  "region": "",
+  "city": "Lapland",
+  "thumb": "https://balticlivecam.com/images/webcam_santa_claus_village_lapland.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Finland_Levi.jpg",
+  "name": "Webcam Levi Summit, Levi, Finland - Online Live Cam",
+  "desc": "Webcam Levi Summit, Levi, Finland - Online Live Cam",
+  "country": "finland",
+  "region": "",
+  "city": "Levi",
+  "thumb": "https://balticlivecam.com/images/Finland_Levi.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_pori_view_finland.jpg",
+  "name": "Webcam View of Pori city, Pori, Finland - Online Live Cam",
+  "desc": "Webcam View of Pori city, Pori, Finland - Online Live Cam",
+  "country": "finland",
+  "region": "",
+  "city": "Pori 2",
+  "thumb": "https://balticlivecam.com/images/webcam_pori_view_finland.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_porvoo_city_view_finland.jpg",
+  "name": "Webcam Porvoo city view, Porvoo, Finland - Online Live Cam",
+  "desc": "Webcam Porvoo city view, Porvoo, Finland - Online Live Cam",
+  "country": "finland",
+  "region": "",
+  "city": "Porvoo",
+  "thumb": "https://balticlivecam.com/images/webcam_porvoo_city_view_finland.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_kylmapihlaja_island_lighthouse_finland.jpg",
+  "name": "Webcam Kylmäpihlaja island lighthouse, Rauma, Finland - Onli",
+  "desc": "Webcam Kylmäpihlaja island lighthouse, Rauma, Finland - Online Live",
+  "country": "finland",
+  "region": "",
+  "city": "Rauma",
+  "thumb": "https://balticlivecam.com/images/webcam_kylmapihlaja_island_lighthouse_finland.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_rauma_market_square_finland.jpg",
+  "name": "Webcam Rauma market place, Rauma, Finland - Online Live Cam",
+  "desc": "Webcam Rauma market place, Rauma, Finland - Online Live Cam",
+  "country": "finland",
+  "region": "",
+  "city": "Rauma",
+  "thumb": "https://balticlivecam.com/images/webcam_rauma_market_square_finland.jpg",
+  "kind": "image"
  },
  {
   "url": "https://www.skylinewebcams.com/en/webcam/finland/north-ostrobothnia/hailuoto/hailuoto.html",
@@ -21007,6 +21217,36 @@
   "thumb": "https://cdn.skylinewebcams.com/live688.jpg"
  },
  {
+  "url": "https://balticlivecam.com/images/webcam_husavik_port_iceland.jpg",
+  "name": "Webcam Húsavík port, Húsavík, Iceland - Online Live Cam",
+  "desc": "Webcam Húsavík port, Húsavík, Iceland - Online Live Cam",
+  "country": "iceland",
+  "region": "",
+  "city": "Husavik",
+  "thumb": "https://balticlivecam.com/images/webcam_husavik_port_iceland.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Isafjordur_city_Iceland.jpg",
+  "name": "Webcam Isafjordur, Isafjordur, Iceland - Online Live Cam",
+  "desc": "Webcam Isafjordur, Isafjordur, Iceland - Online Live Cam",
+  "country": "iceland",
+  "region": "",
+  "city": "Isafjordur",
+  "thumb": "https://balticlivecam.com/images/webcam_Isafjordur_city_Iceland.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Geldingaffel_hut.jpg",
+  "name": "Webcam Geldingaffel hut, Reykholt, Iceland - Online Live Cam",
+  "desc": "Webcam Geldingaffel hut, Reykholt, Iceland - Online Live Cam",
+  "country": "iceland",
+  "region": "",
+  "city": "Reykholt",
+  "thumb": "https://balticlivecam.com/images/webcam_Geldingaffel_hut.jpg",
+  "kind": "image"
+ },
+ {
   "url": "https://www.skylinewebcams.com/en/webcam/iceland/northeastern-region/akureyri/rosenborg.html",
   "name": "Akureyri",
   "desc": "View from Akureyri in Iceland",
@@ -21187,6 +21427,26 @@
   "thumb": "https://cdn.skylinewebcams.com/live5165.jpg"
  },
  {
+  "url": "https://balticlivecam.com/images/webcamera_imam_reza_mashhad_iran.jpg",
+  "name": "Webcam Imam Reza shrine, Mashhad - Online Live Cam",
+  "desc": "Webcam Imam Reza shrine, Mashhad - Online Live Cam",
+  "country": "iran",
+  "region": "",
+  "city": "Mashhad",
+  "thumb": "https://balticlivecam.com/images/webcamera_imam_reza_mashhad_iran.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_al_abbas_mosque_karbala_iraq.jpg",
+  "name": "Webcam Al Abbas Mosque, Karbala, Iraq - Online Live Cam",
+  "desc": "Webcam Al Abbas Mosque, Karbala, Iraq - Online Live Cam",
+  "country": "iraq",
+  "region": "",
+  "city": "Karbala",
+  "thumb": "https://balticlivecam.com/images/webcam_al_abbas_mosque_karbala_iraq.jpg",
+  "kind": "image"
+ },
+ {
   "url": "https://www.skylinewebcams.com/en/webcam/iraq/karbala-governorate/karbala/holy-shrines-of-imam-hussain-and-abbas.html",
   "name": "Karbala - Iraq",
   "desc": "View of the Shrine of Imam Hussain and Abbas in Kerbala, Iraq",
@@ -21257,6 +21517,46 @@
   "region": "munster",
   "city": "kerry",
   "thumb": "https://cdn.skylinewebcams.com/live1413.jpg"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Caesarea_beach_Israel.jpg",
+  "name": "Webcam Caesarea beach, Caesarea, Israel - Online Live Cam",
+  "desc": "Webcam Caesarea beach, Caesarea, Israel - Online Live Cam",
+  "country": "israel",
+  "region": "",
+  "city": "Caesarea",
+  "thumb": "https://balticlivecam.com/images/webcam_Caesarea_beach_Israel.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_bat_galim_beach_haifa-israel.jpg",
+  "name": "Webcam Bat Galim beach, Haifa , Israel- Online Live Cam",
+  "desc": "Webcam Bat Galim beach, Haifa , Israel- Online Live Cam",
+  "country": "israel",
+  "region": "",
+  "city": "Haifa",
+  "thumb": "https://balticlivecam.com/images/webcam_bat_galim_beach_haifa-israel.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_western_wall_jerusalem.jpg",
+  "name": "Webcam Western Wall, Jerusalem - Online Live Cam",
+  "desc": "Webcam Western Wall, Jerusalem - Online Live Cam",
+  "country": "israel",
+  "region": "",
+  "city": "Jerusalem",
+  "thumb": "https://balticlivecam.com/images/webcam_western_wall_jerusalem.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Nazareth_Grotto_Annunciation.jpg",
+  "name": "Webcam Grotto of the Annunciation, Nazareth, Israel - Online",
+  "desc": "Webcam Grotto of the Annunciation, Nazareth, Israel - Online Live Cam",
+  "country": "israel",
+  "region": "",
+  "city": "Nazareth",
+  "thumb": "https://balticlivecam.com/images/webcam_Nazareth_Grotto_Annunciation.jpg",
+  "kind": "image"
  },
  {
   "url": "https://www.skylinewebcams.com/en/webcam/israel/southern-district/ashdod/oranim-beach.html",
@@ -31969,6 +32269,356 @@
   "thumb": "https://cdn.skylinewebcams.com/live3395.jpg"
  },
  {
+  "url": "https://balticlivecam.com/images/webcam_cesis_panorama_latvia.jpg",
+  "name": "Webcam Cēsis panorama, Cēsis, Latvia - Online Live Cam",
+  "desc": "Webcam Cēsis panorama, Cēsis, Latvia - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Cesis",
+  "thumb": "https://balticlivecam.com/images/webcam_cesis_panorama_latvia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_rose_square_cesis_latvia.jpg",
+  "name": "Webcam Square of Roses, Cēsis, Latvia - Online Live Cam",
+  "desc": "Webcam Square of Roses, Cēsis, Latvia - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Cesis",
+  "thumb": "https://balticlivecam.com/images/webcam_rose_square_cesis_latvia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Unity_Square_cesis_latvia.jpg",
+  "name": "Webcam Unity Square, Cēsis, Latvia - Online Live Cam",
+  "desc": "Webcam Unity Square, Cēsis, Latvia - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Cesis",
+  "thumb": "https://balticlivecam.com/images/webcam_Unity_Square_cesis_latvia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/daugavpils.jpg",
+  "name": "Weather in Daugavpils, Latvia from the Live HD Webcam",
+  "desc": "Weather in Daugavpils, Latvia from the Live HD Webcam",
+  "country": "latvia",
+  "region": "",
+  "city": "Daugavpils",
+  "thumb": "https://balticlivecam.com/images/daugavpils.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_concert_hall-dzintari_jurmala_latvia.jpg",
+  "name": "Dzintari Concert Hall - view from Pegasa Pils Boutique SPA &",
+  "desc": "Dzintari Concert Hall - view from Pegasa Pils Boutique SPA &amp; Resort Hotel",
+  "country": "latvia",
+  "region": "",
+  "city": "Jurmala",
+  "thumb": "https://balticlivecam.com/images/webcam_concert_hall-dzintari_jurmala_latvia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/cafe-53.jpg",
+  "name": "Webcam From “Cafe 53” on Jomas Street | balticlivecam.com",
+  "desc": "Webcam From “Cafe 53” on Jomas Street | balticlivecam.com",
+  "country": "latvia",
+  "region": "",
+  "city": "Jurmala",
+  "thumb": "https://balticlivecam.com/images/cafe-53.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_JURMALA_VIEW-FROM-SEMARAH-HOTEL.jpg",
+  "name": "Webcam Jurmala - View From Semarah Hotel, Jurmala - Online L",
+  "desc": "Webcam Jurmala - View From Semarah Hotel, Jurmala - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Jurmala",
+  "thumb": "https://balticlivecam.com/images/webcam_JURMALA_VIEW-FROM-SEMARAH-HOTEL.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/jurmala-beachpanorama.jpg",
+  "name": "Webcam Jurmala Beach Panorama, view from restaurant PiJi, Ju",
+  "desc": "Webcam Jurmala Beach Panorama, view from restaurant PiJi, Jurmala - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Jurmala",
+  "thumb": "https://balticlivecam.com/images/jurmala-beachpanorama.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/majoribeach.jpg",
+  "name": "Webcam Majori Beach, Jurmala, Latvia - Online Live Cam",
+  "desc": "Webcam Majori Beach, Jurmala, Latvia - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Jurmala",
+  "thumb": "https://balticlivecam.com/images/majoribeach.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_cafe53_jurmala_latvia.jpg",
+  "name": "Webcam View from &quot;Cafe 53&quot; to the Jomas street, Ju",
+  "desc": "Webcam View from &quot;Cafe 53&quot; to the Jomas street, Jurmala - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Jurmala",
+  "thumb": "https://balticlivecam.com/images/webcam_cafe53_jurmala_latvia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_jurmmala_park_house.jpg",
+  "name": "Webcam View from Jurmala park house, Jurmala - Online Live C",
+  "desc": "Webcam View from Jurmala park house, Jurmala - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Jurmala",
+  "thumb": "https://balticlivecam.com/images/webcam_jurmmala_park_house.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/liapaja.jpg",
+  "name": "Weather Forecast in Liepaja and Live Stream Webcam of City C",
+  "desc": "Weather Forecast in Liepaja and Live Stream Webcam of City Center",
+  "country": "latvia",
+  "region": "",
+  "city": "Liepaja",
+  "thumb": "https://balticlivecam.com/images/liapaja.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam__Concert_hall_-Great_Amber_liepaja_latvia.jpg",
+  "name": "Webcam Concert Hall Great Amber, Liepaja, Latvia- Online Liv",
+  "desc": "Webcam Concert Hall Great Amber, Liepaja, Latvia- Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Liepaja",
+  "thumb": "https://balticlivecam.com/images/webcam__Concert_hall_-Great_Amber_liepaja_latvia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Latvija_Rezekne_Latgola-hotel-view-from-webcam.jpg",
+  "name": "Live Stream Webcam of the Weather in Rezekne from Hotel Latg",
+  "desc": "Live Stream Webcam of the Weather in Rezekne from Hotel Latgale",
+  "country": "latvia",
+  "region": "",
+  "city": "Rezekne",
+  "thumb": "https://balticlivecam.com/images/Latvija_Rezekne_Latgola-hotel-view-from-webcam.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/SuspensionbridgeRiga.jpg",
+  "name": "A Webcam View of the Riga Suspension Bridge",
+  "desc": "A Webcam View of the Riga Suspension Bridge",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/SuspensionbridgeRiga.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_livu_square_riga_latvia.jpg",
+  "name": "Riga live camera - Webcam online Livu square Old Riga town, ",
+  "desc": "Riga live camera - Webcam online Livu square Old Riga town, Riga, Latvia",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/webcam_livu_square_riga_latvia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_jana_baznica_street_riga.jpg",
+  "name": "The Narrow Streets of Old Riga | Baltic Live Cam",
+  "desc": "The Narrow Streets of Old Riga | Baltic Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/webcam_jana_baznica_street_riga.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/LV_Riga_11_Nov.jpg",
+  "name": "Webcam 11 November embankment Riga, Latvia - Lacplesis Day,",
+  "desc": "Webcam 11 November embankment Riga, Latvia - Lacplesis Day,",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/LV_Riga_11_Nov.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/audejustreet.jpg",
+  "name": "Webcam Audēju Street, Riga, Latvia- Online Live Cam",
+  "desc": "Webcam Audēju Street, Riga, Latvia- Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/audejustreet.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Latvia_Riga_Central-market.jpg",
+  "name": "Webcam Riga Central Market, Riga, Latvia - Online Live Cam",
+  "desc": "Webcam Riga Central Market, Riga, Latvia - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/Latvia_Riga_Central-market.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Latvia_riga_Radisson-Blu-hotel-webcam.jpg",
+  "name": "Webcam Riga Panorama, Riga, Latvia - Online Live cam",
+  "desc": "Webcam Riga Panorama, Riga, Latvia - Online Live cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/Latvia_riga_Radisson-Blu-hotel-webcam.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/skarnustreet.jpg",
+  "name": "Webcam St.John’s Church (Skarnu street), Riga, Latvia - Onli",
+  "desc": "Webcam St.John’s Church (Skarnu street), Riga, Latvia - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/skarnustreet.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/monument.jpg",
+  "name": "Webcam The Freedom Monument Square, Riga - Online Live Cam",
+  "desc": "Webcam The Freedom Monument Square, Riga - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Riga",
+  "thumb": "https://balticlivecam.com/images/monument.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/ventspils.jpg",
+  "name": "Webcam Ventspils - View from hotel Dzintarjūra, Ventspils (W",
+  "desc": "Webcam Ventspils - View from hotel Dzintarjūra, Ventspils (Windau) - Online Live Cam",
+  "country": "latvia",
+  "region": "",
+  "city": "Ventspils",
+  "thumb": "https://balticlivecam.com/images/ventspils.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_kaunas_city_view_lithuania.jpg",
+  "name": "Webcam Kaunas city view, Kaunas, Lithuania - Online Live Cam",
+  "desc": "Webcam Kaunas city view, Kaunas, Lithuania - Online Live Cam",
+  "country": "lithuania",
+  "region": "",
+  "city": "Kaunas",
+  "thumb": "https://balticlivecam.com/images/webcam_kaunas_city_view_lithuania.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Lithuania_Amberton-Klaipeda-Hotel-Webcam.jpg",
+  "name": "See the Weather in Klaipeda Lithuania on Port of Klaipeda We",
+  "desc": "See the Weather in Klaipeda Lithuania on Port of Klaipeda Webcam",
+  "country": "lithuania",
+  "region": "",
+  "city": "Klaipeda",
+  "thumb": "https://balticlivecam.com/images/Lithuania_Amberton-Klaipeda-Hotel-Webcam.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_melnrage_pier_klaipeda_lithuania.jpg",
+  "name": "Webcam Melnrage Mol, Klaipeda, Lithuana - Online Live Cam",
+  "desc": "Webcam Melnrage Mol, Klaipeda, Lithuana - Online Live Cam",
+  "country": "lithuania",
+  "region": "",
+  "city": "Klaipeda",
+  "thumb": "https://balticlivecam.com/images/webcam_melnrage_pier_klaipeda_lithuania.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_neringa.jpg",
+  "name": "Webcam Panorama of Neringa Beach, Neringa, Lithuania - Onlin",
+  "desc": "Webcam Panorama of Neringa Beach, Neringa, Lithuania - Online HD",
+  "country": "lithuania",
+  "region": "",
+  "city": "Neringa",
+  "thumb": "https://balticlivecam.com/images/webcam_neringa.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Palanga_Manciske_beac.jpg",
+  "name": "Webcam Manciškė beach, Palanga - Online Live Cam",
+  "desc": "Webcam Manciškė beach, Palanga - Online Live Cam",
+  "country": "lithuania",
+  "region": "",
+  "city": "Palanga",
+  "thumb": "https://balticlivecam.com/images/webcam_Palanga_Manciske_beac.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/lithuania_panevezas.jpg",
+  "name": "Panevezys Weather Live Stream from Webcam from Romantic Hote",
+  "desc": "Panevezys Weather Live Stream from Webcam from Romantic Hotel",
+  "country": "lithuania",
+  "region": "",
+  "city": "Panevezys",
+  "thumb": "https://balticlivecam.com/images/lithuania_panevezas.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_hales_market_vilnius.jpg",
+  "name": "Check the Weather Webcam near Hales Market in Vilnius, Lithu",
+  "desc": "Check the Weather Webcam near Hales Market in Vilnius, Lithuania",
+  "country": "lithuania",
+  "region": "",
+  "city": "Vilnius",
+  "thumb": "https://balticlivecam.com/images/webcam_hales_market_vilnius.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Lithuania_Vilnius-panorama-webcam-view.jpg",
+  "name": "Lithuania Weather Webcam from Vilnius Hotel Crowne Plaza",
+  "desc": "Lithuania Weather Webcam from Vilnius Hotel Crowne Plaza",
+  "country": "lithuania",
+  "region": "",
+  "city": "Vilnius",
+  "thumb": "https://balticlivecam.com/images/Lithuania_Vilnius-panorama-webcam-view.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/snap_Ramada.jpg",
+  "name": "Webcam View from IMPERIAL Hotel &amp; Restaurant, Vilnius - ",
+  "desc": "Webcam View from IMPERIAL Hotel &amp; Restaurant, Vilnius - Online Live Cam",
+  "country": "lithuania",
+  "region": "",
+  "city": "Vilnius",
+  "thumb": "https://balticlivecam.com/images/snap_Ramada.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_vilnius_panorama.jpg",
+  "name": "Webcam Vilnius panorama, Vilnius - Online Live Cam",
+  "desc": "Webcam Vilnius panorama, Vilnius - Online Live Cam",
+  "country": "lithuania",
+  "region": "",
+  "city": "Vilnius",
+  "thumb": "https://balticlivecam.com/images/webcam_vilnius_panorama.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/vilnius-SV-JONO-gatve.jpg",
+  "name": "Webcam Vilnius-Šv. Jono gatvė street, Vilnius - Online Live ",
+  "desc": "Webcam Vilnius-Šv. Jono gatvė street, Vilnius - Online Live Cam",
+  "country": "lithuania",
+  "region": "",
+  "city": "Vilnius",
+  "thumb": "https://balticlivecam.com/images/vilnius-SV-JONO-gatve.jpg",
+  "kind": "image"
+ },
+ {
   "url": "https://www.skylinewebcams.com/en/webcam/luxembourg/grevenmacher/mertert/wasserbillig.html",
   "name": "Wasserbillig - Luxembourg",
   "desc": "Panoramic view of Wasserbillig, Luxembourg",
@@ -33661,6 +34311,36 @@
   "thumb": "https://cdn.skylinewebcams.com/live3082.jpg"
  },
  {
+  "url": "https://balticlivecam.com/images/norway_geirange.jpg",
+  "name": "Webcam Geirangerfjord Cruise Port, Geiranger, Norway - Onlin",
+  "desc": "Webcam Geirangerfjord Cruise Port, Geiranger, Norway - Online Live Cam",
+  "country": "norge",
+  "region": "",
+  "city": "Geiranger",
+  "thumb": "https://balticlivecam.com/images/norway_geirange.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Kristiansund_norway-1.jpg",
+  "name": "Webcam Panoramic view of Kristiansund, Kristiansund, Norway ",
+  "desc": "Webcam Panoramic view of Kristiansund, Kristiansund, Norway - Online Live Cam",
+  "country": "norge",
+  "region": "",
+  "city": "Kristiansund",
+  "thumb": "https://balticlivecam.com/images/webcam_Kristiansund_norway-1.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_lodingen.jpg",
+  "name": "Webcam Lødingen, Lødingen, Norway - Online Live Cam",
+  "desc": "Webcam Lødingen, Lødingen, Norway - Online Live Cam",
+  "country": "norge",
+  "region": "",
+  "city": "Lodingen",
+  "thumb": "https://balticlivecam.com/images/webcam_lodingen.jpg",
+  "kind": "image"
+ },
+ {
   "url": "https://www.skylinewebcams.com/en/webcam/norge/eastern-norway/beitostolen/ski-area.html",
   "name": "Beitostølen Ski Area - Norway",
   "desc": "View from the Beitostølen ski area in Norway",
@@ -35155,6 +35835,196 @@
   "thumb": "https://cdn.skylinewebcams.com/live2074.jpg"
  },
  {
+  "url": "https://balticlivecam.com/images/webcam_Astrakhan_panorama_russia.jpg",
+  "name": "Webcam Astrakhan panorama, Astrakhan, Russia - Online Live C",
+  "desc": "Webcam Astrakhan panorama, Astrakhan, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Astrakhan",
+  "thumb": "https://balticlivecam.com/images/webcam_Astrakhan_panorama_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Petrovskaya_embankment_Astrakhan_russia.jpg",
+  "name": "Webcam Petrovskaya Embankment, Astrakhan, Russia - Online Li",
+  "desc": "Webcam Petrovskaya Embankment, Astrakhan, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Astrakhan",
+  "thumb": "https://balticlivecam.com/images/webcam_Petrovskaya_embankment_Astrakhan_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_barnaul_city_view_russia.jpg",
+  "name": "Webcam Barnaul city view, Barnaul, Russia - Online Live Cam",
+  "desc": "Webcam Barnaul city view, Barnaul, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Barnaul",
+  "thumb": "https://balticlivecam.com/images/webcam_barnaul_city_view_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_kazan_city_view_russia.jpg",
+  "name": "Webcam Kazan city view, Kazan, Russia- Online Live Cam",
+  "desc": "Webcam Kazan city view, Kazan, Russia- Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Kazan",
+  "thumb": "https://balticlivecam.com/images/webcam_kazan_city_view_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_kazan_panoramic_view.jpg",
+  "name": "Webcam Kazan panoramic view, Kazan, Russia - Online Live Cam",
+  "desc": "Webcam Kazan panoramic view, Kazan, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Kazan",
+  "thumb": "https://balticlivecam.com/images/webcam_kazan_panoramic_view.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_moscow_panoramic_view.jpg",
+  "name": "Webcam Moscow panoramic view, Moscow, Russia - Online Live C",
+  "desc": "Webcam Moscow panoramic view, Moscow, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Moscow",
+  "thumb": "https://balticlivecam.com/images/webcam_moscow_panoramic_view.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Novosibirsk_city_view_russia.jpg",
+  "name": "Webcam Novosibirsk city view, Novosibirsk, Russia - Online L",
+  "desc": "Webcam Novosibirsk city view, Novosibirsk, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Novosibirsk",
+  "thumb": "https://balticlivecam.com/images/webcam_Novosibirsk_city_view_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_novosibirsk_panorama_russia.jpg",
+  "name": "Webcam Novosibirsk panoramic view, Novosibirsk, Russia - Onl",
+  "desc": "Webcam Novosibirsk panoramic view, Novosibirsk, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Novosibirsk",
+  "thumb": "https://balticlivecam.com/images/webcam_novosibirsk_panorama_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_palace_square_hermitage_st_petersburg.jpg",
+  "name": "Webcam Palace Square and Hermitage, Saint Petersburg - Onlin",
+  "desc": "Webcam Palace Square and Hermitage, Saint Petersburg - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Saint Petersburg",
+  "thumb": "https://balticlivecam.com/images/webcam_palace_square_hermitage_st_petersburg.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_peterhof_saint_petersburg_russia.jpg",
+  "name": "Webcam Peterhof, Saint Petersburg, Russia - Online Live Cam",
+  "desc": "Webcam Peterhof, Saint Petersburg, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Saint Petersburg",
+  "thumb": "https://balticlivecam.com/images/webcam_peterhof_saint_petersburg_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_saint_petersburg_city_view_russia.jpg",
+  "name": "Webcam Saint Petersburg city view, Saint Petersburg - Online",
+  "desc": "Webcam Saint Petersburg city view, Saint Petersburg - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Saint Petersburg",
+  "thumb": "https://balticlivecam.com/images/webcam_saint_petersburg_city_view_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/Russia_St.Petersburg_Vasilevsky-Island.jpg",
+  "name": "Webcam Vasilyevsky Island, Saint Petersburg - Online Live Ca",
+  "desc": "Webcam Vasilyevsky Island, Saint Petersburg - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Saint Petersburg",
+  "thumb": "https://balticlivecam.com/images/Russia_St.Petersburg_Vasilevsky-Island.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_roza_dolina_sochi_russia.jpg",
+  "name": "Webcam Rosa Dolina, Sochi, Russia - Online Live Cam",
+  "desc": "Webcam Rosa Dolina, Sochi, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Sochi",
+  "thumb": "https://balticlivecam.com/images/webcam_roza_dolina_sochi_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_roza_khutor_Sochi.jpg",
+  "name": "Webcam Rosa Khutor Alpine resort, Sochi, Russia - Online liv",
+  "desc": "Webcam Rosa Khutor Alpine resort, Sochi, Russia - Online live cam",
+  "country": "russia",
+  "region": "",
+  "city": "Sochi",
+  "thumb": "https://balticlivecam.com/images/webcam_roza_khutor_Sochi.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_sochi_panorama_Russia.jpg",
+  "name": "Webcam Sochi panorama, Sochi - Online Live Cam",
+  "desc": "Webcam Sochi panorama, Sochi - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Sochi",
+  "thumb": "https://balticlivecam.com/images/webcam_sochi_panorama_Russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Ulan_Ude_city_view_russia.jpg",
+  "name": "Webcam Ulan-Ude city view, Ulan-Ude, Buryatia - Online Live ",
+  "desc": "Webcam Ulan-Ude city view, Ulan-Ude, Buryatia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Ulan Ude",
+  "thumb": "https://balticlivecam.com/images/webcam_Ulan_Ude_city_view_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_vladivostok_city_view_russia.jpg",
+  "name": "Webcam Vladivostok city view, Vladivostok, Russia - Online L",
+  "desc": "Webcam Vladivostok city view, Vladivostok, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Vladivostok",
+  "thumb": "https://balticlivecam.com/images/webcam_vladivostok_city_view_russia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_mamayev_kurgan_volgograd.jpg",
+  "name": "Webcam Mamayev Kurgan, Volgograd, Russia - Online Live Cam",
+  "desc": "Webcam Mamayev Kurgan, Volgograd, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Volgograd",
+  "thumb": "https://balticlivecam.com/images/webcam_mamayev_kurgan_volgograd.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Yoshkar_Ola_Chavaina-boulevard_russia.jpg",
+  "name": "Webcam Chavain boulevard, Yoshkar-Ola, Russia - Online Live ",
+  "desc": "Webcam Chavain boulevard, Yoshkar-Ola, Russia - Online Live Cam",
+  "country": "russia",
+  "region": "",
+  "city": "Yoshkar Ola",
+  "thumb": "https://balticlivecam.com/images/webcam_Yoshkar_Ola_Chavaina-boulevard_russia.jpg",
+  "kind": "image"
+ },
+ {
   "url": "https://www.skylinewebcams.com/en/webcam/russia/far-eastern-federal-district/lensk/troyka.html",
   "name": "Lensk - Troya Monument",
   "desc": "View of the Troyka Monument in Lensk, Russia",
@@ -35315,6 +36185,26 @@
   "region": "saint-jean",
   "city": "saint-jean",
   "thumb": "https://cdn.skylinewebcams.com/live2337.jpg"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Al-Haram_mecca_saudi_arabia.jpg",
+  "name": "Webcam Al-Haram Mosque, Mecca, Saudi Arabia - Online Live Ca",
+  "desc": "Webcam Al-Haram Mosque, Mecca, Saudi Arabia - Online Live Cam",
+  "country": "saudi-arabia",
+  "region": "",
+  "city": "Mecca",
+  "thumb": "https://balticlivecam.com/images/webcam_Al-Haram_mecca_saudi_arabia.jpg",
+  "kind": "image"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_Al-Masjid-an-Nabawi-_medina.jpg",
+  "name": "Webcam Al-Masjid an-Nabawi, Medina - Online Live Cam",
+  "desc": "Webcam Al-Masjid an-Nabawi, Medina - Online Live Cam",
+  "country": "saudi-arabia",
+  "region": "",
+  "city": "Medina",
+  "thumb": "https://balticlivecam.com/images/webcam_Al-Masjid-an-Nabawi-_medina.jpg",
+  "kind": "image"
  },
  {
   "url": "https://www.skylinewebcams.com/en/webcam/schweiz/canton-of-valais/anniviers/grimentz.html",
@@ -35999,6 +36889,16 @@
   "region": "southern-province",
   "city": "midigama",
   "thumb": "https://cdn.skylinewebcams.com/live3910.jpg"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_stockholm_city_view_sweden.jpg",
+  "name": "Webcam Stockholm city view, Stockholm, Sweden - Online Live ",
+  "desc": "Webcam Stockholm city view, Stockholm, Sweden - Online Live Cam",
+  "country": "svezia",
+  "region": "",
+  "city": "Stockholm",
+  "thumb": "https://balticlivecam.com/images/webcam_stockholm_city_view_sweden.jpg",
+  "kind": "image"
  },
  {
   "url": "https://www.skylinewebcams.com/en/webcam/svezia/norrland/arvidsjaur/arvidsjaur.html",
@@ -105317,6 +106217,16 @@
   "region": "kathu-district",
   "city": "phuket",
   "thumb": "https://cdn.skylinewebcams.com/live5580.jpg"
+ },
+ {
+  "url": "https://balticlivecam.com/images/webcam_sivas_panorama_turkey.jpg",
+  "name": "Webcam Sivas panorama, Sivas - Online Live Cam",
+  "desc": "Webcam Sivas panorama, Sivas - Online Live Cam",
+  "country": "turkey",
+  "region": "",
+  "city": "Sivas",
+  "thumb": "https://balticlivecam.com/images/webcam_sivas_panorama_turkey.jpg",
+  "kind": "image"
  },
  {
   "url": "https://www.skylinewebcams.com/en/webcam/turkey/black-sea-region/erbaa/pnarbeyli-koyu.html",
