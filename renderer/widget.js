@@ -1,7 +1,31 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const C = window.COUNTRIES || {};
-  const HLS_HOST = 'https://hd-auth.skylinewebcams.com/live.m3u8?a=';
+
+  // Windows(旧系统无 emoji 字体)才用 SVG 图标/文字国旗；Mac 保持原样
+  const IS_WIN = /win/i.test(navigator.platform);
+  const WSVG = {
+    prev: '<svg viewBox="0 0 24 24"><path d="M14 5 6 12l8 7zM20 5l-8 7 8 7z" fill="currentColor"/></svg>',
+    next: '<svg viewBox="0 0 24 24"><path d="M10 5l8 7-8 7zM4 5l8 7-8 7z" fill="currentColor"/></svg>',
+    pause: '<svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>',
+    play: '<svg viewBox="0 0 24 24"><path d="M8 5 20 12 8 19z" fill="currentColor"/></svg>',
+    pin: '<svg viewBox="0 0 24 24"><path d="M12 2.5A6.5 6.5 0 0 0 5.5 9c0 4.6 6.5 12.5 6.5 12.5S18.5 13.6 18.5 9A6.5 6.5 0 0 0 12 2.5zm0 9a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2z" fill="currentColor"/></svg>',
+    close: '<svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>',
+    open: '<svg viewBox="0 0 24 24"><path d="M5 9V5h4M15 5h4v4M19 15v4h-4M9 19H5v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+  };
+  function isoFlag(info) { return ((info && info.iso) || '').toUpperCase() || '·'; }
+  if (IS_WIN) {
+    const st = document.createElement('style');
+    st.textContent = '.wbtn svg{width:13px;height:13px;display:block}#wpin.on{color:#22d3ee}' +
+      '.wflag{font-size:9px;font-weight:700;background:rgba(0,0,0,.4);border-radius:5px;padding:1px 5px;color:#dbe3ee}';
+    document.head.appendChild(st);
+    $('wprev').innerHTML = WSVG.prev;
+    $('wnext').innerHTML = WSVG.next;
+    $('wplay').innerHTML = WSVG.pause;
+    $('wpin').innerHTML = WSVG.pin;
+    $('wclose').innerHTML = WSVG.close;
+    $('wopen').innerHTML = WSVG.open;
+  }
 
   const st = {
     list: [], idx: 0, current: null,
@@ -51,7 +75,7 @@
   async function show(cam) {
     st.current = cam;
     const info = C[cam.country] || {};
-    $('wflag').textContent = window.flagEmoji(info.iso);
+    $('wflag').textContent = IS_WIN ? isoFlag(info) : window.flagEmoji(info.iso);
     $('wname').textContent = cam.name || '—';
     $('wload').classList.remove('hidden');
     st.remaining = Math.round(st.interval / 1000);
@@ -121,7 +145,8 @@
   $('wprev').addEventListener('click', prev);
   $('wplay').addEventListener('click', () => {
     st.playing = !st.playing;
-    $('wplay').textContent = st.playing ? '⏸' : '▶';
+    if (IS_WIN) $('wplay').innerHTML = st.playing ? WSVG.pause : WSVG.play;
+    else $('wplay').textContent = st.playing ? '⏸' : '▶';
   });
   $('wclose').addEventListener('click', () => window.cam.closeWidget());
   $('wopen').addEventListener('click', () => window.cam.openMain());
@@ -130,7 +155,8 @@
   let pinMode = 'desktop';
   function applyPin() {
     const onTop = pinMode === 'top';
-    $('wpin').textContent = onTop ? '📍' : '📌';
+    if (IS_WIN) $('wpin').classList.toggle('on', onTop);
+    else $('wpin').textContent = onTop ? '📍' : '📌';
     $('wpin').title = onTop ? '已置顶（点击沉到桌面）' : '已沉到桌面（点击置顶）';
   }
   $('wpin').addEventListener('click', () => {

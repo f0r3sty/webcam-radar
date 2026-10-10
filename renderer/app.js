@@ -2,6 +2,32 @@
   const $ = (id) => document.getElementById(id);
   const C = window.COUNTRIES || {};
 
+  // Windows(旧系统无 emoji 字体)才用 SVG 图标/文字国旗；Mac 保持原样
+  const IS_WIN = /win/i.test(navigator.platform);
+  const ASVG = {
+    prev: '<svg viewBox="0 0 24 24"><path d="M14 5 6 12l8 7zM20 5l-8 7 8 7z" fill="currentColor"/></svg>',
+    next: '<svg viewBox="0 0 24 24"><path d="M10 5l8 7-8 7zM4 5l8 7-8 7z" fill="currentColor"/></svg>',
+    pause: '<svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>',
+    play: '<svg viewBox="0 0 24 24"><path d="M8 5 20 12 8 19z" fill="currentColor"/></svg>',
+    ext: '<svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    open: '<svg viewBox="0 0 24 24"><path d="M5 9V5h4M15 5h4v4M19 15v4h-4M9 19H5v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>',
+    globe: '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM9 2.5A15 15 0 0 0 6.4 12 15 15 0 0 0 9 21.5M15 2.5A15 15 0 0 1 17.6 12 15 15 0 0 1 15 21.5M2 12h20" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>',
+  };
+  function isoFlag(info) { return ((info && info.iso) || '').toUpperCase() || '·'; }
+  if (IS_WIN) {
+    const st = document.createElement('style');
+    st.textContent = '#camFlag{font-size:11px;font-weight:700;background:rgba(0,0,0,.45);border-radius:6px;padding:2px 7px;color:#eef4fb;line-height:1}' +
+      '#controls button svg{width:14px;height:14px;display:block}.sideHead .logo svg{width:18px;height:18px;color:#22d3ee}';
+    document.head.appendChild(st);
+    $('prevBtn').innerHTML = ASVG.prev;
+    $('nextBtn').innerHTML = ASVG.next;
+    $('playBtn').innerHTML = ASVG.pause;
+    $('detailBtn').innerHTML = ASVG.ext;
+    $('fullBtn').innerHTML = ASVG.open;
+    const lg = document.querySelector('.sideHead .logo');
+    if (lg) lg.innerHTML = ASVG.globe;
+  }
+
   const HLS_HOST = 'https://hd-auth.skylinewebcams.com/live.m3u8?a=';
 
   const state = {
@@ -120,7 +146,7 @@
 
   function updateOverlay(cam) {
     const info = C[cam.country] || {};
-    $('camFlag').textContent = window.flagEmoji(info.iso);
+    $('camFlag').textContent = IS_WIN ? isoFlag(info) : window.flagEmoji(info.iso);
     $('camName').textContent = cam.name || '—';
     $('camCountry').textContent = info.n || humanize(cam.country);
     $('camCity').textContent = humanize(cam.city);
@@ -130,7 +156,7 @@
       Number.isFinite(cam.lon) ? cam.lon : info.lon || 0,
     ];
     marker.setLatLng(ll);
-    marker.setTooltipContent(window.flagEmoji(info.iso) + ' ' + (cam.name || ''));
+    marker.setTooltipContent((IS_WIN ? isoFlag(info) : window.flagEmoji(info.iso)) + ' ' + (cam.name || ''));
     map.flyTo(ll, Number.isFinite(cam.lat) ? 9 : 4, { duration: 1.1 });
   }
 
@@ -333,7 +359,8 @@
   $('prevBtn').addEventListener('click', prev);
   $('playBtn').addEventListener('click', () => {
     state.playing = !state.playing;
-    $('playBtn').textContent = state.playing ? '⏸' : '▶';
+    if (IS_WIN) $('playBtn').innerHTML = state.playing ? ASVG.pause : ASVG.play;
+    else $('playBtn').textContent = state.playing ? '⏸' : '▶';
     $('playBtn').title = state.playing ? '暂停轮播' : '继续轮播';
   });
   $('interval').addEventListener('change', (e) => {
